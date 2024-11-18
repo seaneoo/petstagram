@@ -1,0 +1,16 @@
+name: "petstagram"
+
+volumes:
+  postgres:
+
+services:
+  db:
+    image: postgres:16.5-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: petstagram
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: petstagram
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
