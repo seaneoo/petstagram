@@ -5,6 +5,7 @@ CREATE TABLE "users"
     "password"   bytea       NOT NULL,
     "created_at" timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "enabled"    bool        NOT NULL DEFAULT TRUE,
+    "role"       varchar(10) NOT NULL DEFAULT 'user',
     CONSTRAINT "chk_username_format" CHECK ("username" ~ '^\w+$')
 );
 
