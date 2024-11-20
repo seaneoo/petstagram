@@ -1,0 +1,4 @@
+[versions]
+java = "23"
+springBoot = "3.3.5"
+springDependencyManagement = "1.1.6"
